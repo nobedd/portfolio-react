@@ -35,7 +35,7 @@ export default function Navbar() {
                     selected={selectedIndex === 0}
                     onClick={event => handleListItemClick(event, 0)}
                 >
-                    <ListItemText primary="Projects" />
+                    <ListItemText primary="Home" />
                 </ListItem>
 
                 <ListItem
@@ -43,15 +43,23 @@ export default function Navbar() {
                     selected={selectedIndex === 1}
                     onClick={event => handleListItemClick(event, 1)}
                 >
-                    <ListItemText primary="Skills" />
+                    <ListItemText primary="Projects" />
+                </ListItem>
+
+                <ListItem
+                    button
+                    selected={selectedIndex === 1}
+                    onClick={event => handleListItemClick(event, 1)}
+                disabled>
+                    <ListItemText primary="Skills (section in development)" />
                 </ListItem>
                 
                 <ListItem
                     button
                     selected={selectedIndex === 2}
                     onClick={event => handleListItemClick(event, 2)}
-                >
-                    <ListItemText primary="About" />
+                disabled>
+                    <ListItemText primary="About (section in development)" />
                 </ListItem>
             </List>
         </AppBar >

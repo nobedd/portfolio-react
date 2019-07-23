@@ -1,22 +1,26 @@
 import React from 'react';
-import { Container, Typography, Grid } from '@material-ui/core';
+import { Typography, Grid } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent'
 import CardActions from '@material-ui/core/CardActions'
 import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles({
     top: {
-        marginTop: "30px"
+        marginTop: "30px",    
     },
 
     card: {
         marginBottom: "20px"
     },
+
+    text: {
+        textAlign: "center",
+        marginBottom: "10px"
+    }
 });
 
 function Content() {
@@ -24,7 +28,7 @@ function Content() {
 
     return (
         <div className={classes.top}>
-            <Typography variant="h3">Projects_</Typography>
+            <Typography variant="h3" className={classes.text}>Projects</Typography>
 
             <Card className={classes.card}>
                 <CardHeader
@@ -42,7 +46,7 @@ function Content() {
                     <Button size="small" color="primary" href="https://github.com/Bdhawa123/SEPAB-34">
                         GitHub
                     </Button>
-                    <Button size="small" color="primary" className={classes.button}>
+                    <Button size="small" color="primary" className={classes.button} disabled>
                         Web link
                     </Button>
                 </CardActions>
@@ -64,7 +68,7 @@ function Content() {
                     <Button size="small" color="primary" href="https://github.com/nobedd/aussie-climate">
                         GitHub
                     </Button>
-                    <Button size="small" color="primary" disabled>
+                    <Button size="small" color="primary" href="https://nobedd.github.io/aussie-climate/">
                         Web link
                     </Button>
                 </CardActions>
@@ -83,10 +87,32 @@ function Content() {
                 </CardContent>
 
                 <CardActions>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="https://github.com/nobedd/portfolio-react">
                         GitHub
                     </Button>
-                    <Button size="small" color="primary">
+                    <Button size="small" color="primary" href="https://quanchong.dev">
+                        Web link
+                    </Button>
+                </CardActions>
+            </Card>
+
+            <Card className={classes.card}>
+                <CardHeader
+                    title="Multiplayer First-Person-Shooter Game (placeholder name)"
+                    subheader="Unreal Engine, C++"
+                />
+                <Divider />
+                <CardContent>
+                    <Typography>
+                        Personal hobby project, creating a multiplayer FPS game. Development is in early stages.
+                    </Typography>
+                </CardContent>
+
+                <CardActions>
+                    <Button size="small" color="primary" disabled>
+                        GitHub
+                    </Button>
+                    <Button size="small" color="primary" disabled>
                         Web link
                     </Button>
                 </CardActions>
@@ -108,7 +134,5 @@ export default function Projects() {
                 <Grid item xs />
             </Grid>
         </div>
-
-
     );
 }
